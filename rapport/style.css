@@ -5,6 +5,16 @@ body, html {
     background: lightgray;
 }
 
+.class-diagram {
+            display: block;
+            max-width:100%;
+            min-height: 600px;
+            min-width: 600px;
+            height: 100%;
+            width: auto;
+            background-color: #d5d5d5;
+        }
+
 .container {
     max-width: 70rem;
     margin: 4rem auto;
