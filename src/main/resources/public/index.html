@@ -8,8 +8,53 @@
 </head>
 <body>
 <h1>Ma Ville</h1>
-<button id="hello-world-btn">Load message from backend</button>
-<p id="message"></p>
+<div id="accueil" class="menu actif">
+    <p>Bienvenue sur Ma Ville, à quelle type de compte désirez-vous vous connecter?</p>
+    <button class="bouton-menu" data-target="menu-resident">Profil résident</button>
+    <button class="bouton-menu" data-target="menu-prestataire">Profil prestataire</button>
+</div>
+
+<div id="menu-resident" class="menu">
+    <h2>Vous êtes connecté en tant que résident, quelle action désirez-vous effectuer?</h2>
+    <button class="bouton-menu" data-target="menu-problème">Signaler un problème</button>
+    <button class="bouton-menu" data-target="menu-travaux">Consulter les travaux en cours</button>
+    <button class="bouton-menu" data-target="accueil">Quitter</button>
+</div>
+
+<div id="menu-prestataire" class="menu">
+    <h2>Vous êtes connecté en tant que prestataire, quelle action désirez-vous effectuer?</h2>
+    <button class="bouton-menu" data-target="menu-resident">Consulter la liste des formulaires en attente</button>
+    <button class="bouton-menu" data-target="menu-resident">Consulter les notifications</button>
+    <button class="bouton-menu" data-target="menu-resident">Modifier le Statut d'un projet</button>
+    <button class="bouton-menu" data-target="accueil">Quitter</button>
+</div>
+
+<div id="menu-problème" class="menu">
+    <p>Veuillez entrez les informations du problème à résoudre, la STPM sera avisée.</p>
+    <button class="bouton-menu" data-target="menu-resident">Valider</button>
+    <button class="bouton-menu" data-target="menu-resident">Retour</button>
+</div>
+
+<div id="menu-travaux" class="menu">
+    <p>Voici la liste des travaux en cours:</p>
+    <button class="bouton-menu" data-target="menu-resident">Retour</button>
+</div>
+
+<div id="menu-formulaire" class="menu">
+    <p>Voici la liste des fiches problèmes en attente:</p>
+    <button class="bouton-menu" data-target="menu-prestataire">Retour</button>
+</div>
+
+<div id="menu-notification" class="menu">
+    <p>Voici la liste des nouveaux travaux susceptibles de vous intéresser:</p>
+    <button class="bouton-menu" data-target="menu-prestataire">Retour</button>
+</div>
+
+<div id="menu-projet" class="menu">
+    <p>Voici la liste des travaux sur lesquels vous travaillez, lequel désirez vous mettre à jour?</p>
+    <button class="bouton-menu" data-target="menu-prestataire">Retour</button>
+</div>
+
 
 <script src="script.js"></script>
 </body>

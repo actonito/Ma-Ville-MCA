@@ -1,9 +1,12 @@
-document.getElementById("hello-world-btn").addEventListener("click", async () => {
-    try {
-        let response = await fetch("/api/hello_world");
-        let data = await response.json();
-        document.getElementById("message").innerText = data.message;
-    } catch (err) {
-        document.getElementById("message").innerText = "Error loading message.";
-    }
+function menu(menuId){
+    document.querySelectorAll(".menu").forEach(div => {
+    div.classList.remove("actif");
+    });
+    document.getElementById(menuId).classList.add("actif");
+}
+
+document.querySelectorAll(".bouton-menu").forEach(btn => {
+    btn.addEventListener("click", () => {
+        menu(btn.getAttribute("data-target"));
+    });
 });

@@ -23,3 +23,16 @@ button {
 button:hover {
     background-color: #005a99;
 }
+
+
+.menu {
+  display: none;
+}
+
+.menu.actif {
+  display: flex;           
+  flex-direction: column;  
+  align-items: center;     
+  gap: 15px;               
+  margin-top: 20px;        
+}
